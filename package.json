@@ -1,0 +1,25 @@
+{
+  "name": "claude-code-video",
+  "version": "1.0.0",
+  "description": "Claude Code 2026 Feature Intro Video",
+  "scripts": {
+    "start": "npx remotion studio src/index.ts",
+    "render:medium": "npx remotion render src/index.ts ClaudeCodeMedium out/claude-code-medium.mp4 --overwrite",
+    "render:short": "npx remotion render src/index.ts ClaudeCodeShort out/claude-code-short.mp4 --overwrite",
+    "render:all": "npm run render:medium && npm run render:short"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/google-fonts": "^4.0.0",
+    "@remotion/media": "^4.0.434",
+    "@remotion/transitions": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}
