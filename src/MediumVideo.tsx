@@ -65,6 +65,11 @@ export const MediumVideo: React.FC = () => {
         </TransitionSeries.Sequence>
       </TransitionSeries>
 
+      {/* BGM layer — ambient tech, low volume under voiceover */}
+      <Sequence from={0} layout="none">
+        <Audio src={staticFile("bgm/ambient-tech.mp3")} volume={0.15} />
+      </Sequence>
+
       {/* Voiceover layer */}
       <Sequence from={Math.round(1 * FPS)} layout="none">
         <Audio src={staticFile("voiceover/intro.mp3")} volume={0.9} />

@@ -1,5 +1,6 @@
 import React from "react";
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, Sequence, staticFile } from "remotion";
+import { Audio } from "@remotion/media";
 import { TransitionSeries } from "@remotion/transitions";
 import { C, FPS } from "./theme";
 import { Intro } from "./scenes/Intro";
@@ -56,6 +57,11 @@ export const ShortVideo: React.FC = () => {
           <Outro />
         </TransitionSeries.Sequence>
       </TransitionSeries>
+
+      {/* BGM layer */}
+      <Sequence from={0} layout="none">
+        <Audio src={staticFile("bgm/ambient-tech.mp3")} volume={0.15} />
+      </Sequence>
     </AbsoluteFill>
   );
 };
